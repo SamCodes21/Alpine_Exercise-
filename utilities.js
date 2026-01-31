@@ -1,3 +1,4 @@
+alert("utilities.js loaded");
 function randomName() {
   return {
     names: [
