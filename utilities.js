@@ -1,9 +1,22 @@
 function randomName (arg) {
-    const randomIndex = Math.floor(Math.random() * arg.length)
+  return {
+    names: [
+        "Jake",
+        "Noah",
+        "Robert",
+        "Sean",
+        "Gerald",
+        "Katie",
+        "Logan",
+        "Josh",
+        "Magnus",
+        "Mandy",
+    ], 
+    newName: "",
 
-    return arg[randomIndex];
+    selectName () {
+        const randomIndex = Math.floor(Math.random() * this.names.length);
+        this.newName = this.names[randomIndex];
+    }
+  };  
 }
-
-const names = ["Jake", "Robert", "Sean", "Gerald", "Katie", "Logan", "Josh", "Magnus", "Mandy", "Janice" ];
-
-const selectedName = getRandomName(names);

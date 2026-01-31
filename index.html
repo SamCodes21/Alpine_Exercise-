@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpine</title>
     <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="utilities.js"></script>
+    <script src="utilities.js" defer></script>
 </head>
 <body>
     <div x-data="randomName()">
-        <button @click="alert(selectedName)">CLick for Name</button>
+        <button @click="selectName()">Click for Name</button>
         <h1 x-text="newName"></h1>
     </div>
 </body>
