@@ -1,4 +1,3 @@
-alert("utilities.js loaded");
 function randomName() {
   return {
     names: [
@@ -16,8 +15,9 @@ function randomName() {
     newName: "",
 
     selectName () {
-        const randomIndex = Math.floor(Math.random() * this.names.length);
-        this.newName = this.names[randomIndex];
+        this.newName = this.names[
+          Math.floor(Math.Random() * this.names.length)
+        ];
         alert(this.newName);
     }
   };  
