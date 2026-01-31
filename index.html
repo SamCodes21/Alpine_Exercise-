@@ -8,6 +8,8 @@
     <script src="utilities.js" defer></script>
 </head>
 <body>
+    <div x-data="randomName()" x-init="console.log('Alpine is running')">
+
     <div x-data="randomName()">
         <button @click="selectName()">Click for Name</button>
         <h1 x-text="newName"></h1>
