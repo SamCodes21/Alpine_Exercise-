@@ -1,4 +1,4 @@
-function randomName (arg) {
+function randomName() {
   return {
     names: [
         "Jake",
