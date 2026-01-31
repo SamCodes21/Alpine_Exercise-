@@ -17,6 +17,7 @@ function randomName() {
     selectName () {
         const randomIndex = Math.floor(Math.random() * this.names.length);
         this.newName = this.names[randomIndex];
+        alert(this.newName);
     }
   };  
 }
