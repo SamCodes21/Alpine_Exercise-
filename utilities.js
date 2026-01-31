@@ -16,7 +16,7 @@ function randomName() {
 
     selectName () {
         this.newName = this.names[
-          Math.floor(Math.Random() * this.names.length)
+          Math.floor(Math.random() * this.names.length)
         ];
         alert(this.newName);
     }
