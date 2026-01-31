@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpine Test</title>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script defer src="utilities.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpine.js Random Name</title>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
-    <div x-data="randomName()">
-        <button @click="selectName()">Click for Name</button>
-        <h1 x-text="newName"></h1>
-    </div>
+<body class="p-6">
+
+  <div x-data="{
+      names: ['Jake','Noah','Robert','Sean','Gerald','Katie','Logan','Josh','Magnus','Mandy'],
+      newName: '',
+      selectName() {
+        this.newName = this.names[Math.floor(Math.random() * this.names.length)];
+      }
+    }">
+    <button 
+      @click="selectName()" 
+      class="px-4 py-2 bg-blue-500 text-white rounded">
+      Click for Name
+    </button>
+
+    <h1 class="mt-6 text-3xl font-bold" x-text="newName">Click for Name</h1>
+  </div>
+
 </body>
 </html>
