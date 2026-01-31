@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpine</title>
-    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-    <script src="utilities.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="utilities.js"></script>
 </head>
 <body>
+    <p x-data x-text="'Alpine is alive'"></p>
     <div x-data="randomName()" x-init="console.log('Alpine is running')">
         <button @click="selectName()">Click for Name</button>
         <h1 x-text="newName"></h1>
